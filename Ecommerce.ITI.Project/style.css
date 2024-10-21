@@ -1,0 +1,435 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@300;400;700;900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+:root {
+    --primary-color: hsl(180, 35%, 22%);
+    --text-dark: #171717;
+    --text-light: #737373;
+    --extra-light: #f4f6f5;
+    --white: #ffffff;
+    --max-width: 1200px;
+    --header-font: "Merriweather", serif;
+    --body-font: "Poppins", sans-serif;
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--body-font);
+    line-height: 1.6;
+    background-color: var(--extra-light);
+    padding-top: 4rem;
+}
+
+.section_container {
+    max-width: var(--max-width);
+    margin: auto;
+    padding: 5rem 1rem;
+}
+
+.section_header {
+    margin-bottom: 1rem;
+    font-size: 2.5rem;
+    font-weight: 600;
+    font-family: var(--header-font);
+    color: var(--primary-color);
+}
+
+.section.description {
+    font-size: 1.1rem;
+    color: var(--text-light);
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: 600;
+    font-family: var(--header-font);
+    color: var(--primary-color);
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+a {
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+ul {
+    list-style: none;
+}
+
+html, body {
+    scroll-behavior: smooth;
+}
+
+nav {
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+.nav_links {
+    display: flex;
+    gap: 2rem;
+}
+
+.nav_links a {
+    color: var(--text-dark);
+    font-weight: 500;
+}
+
+.nav_links a:hover {
+    color: var(--primary-color);
+}
+
+.slider-container {
+    margin: 0 auto;
+    padding: 3rem 0;
+    background-color: #ffff;
+}
+
+.slider {
+    display: flex;
+    overflow: hidden;
+    max-width: 100%;
+    padding: 2rem 0;
+    justify-content: center;
+}
+
+.slide {
+    min-width: 30%;
+    max-width: 300px;
+    transition: transform 0.5s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    height: 300px;
+}
+
+.slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 5px;
+    max-width: 100%;
+    max-height: 100%;
+}
+
+
+.slide-info {
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.7);
+    color: white;
+    padding: 0.75rem;
+    border-radius: 5px;
+    width: 90%;
+    box-sizing: border-box;
+    -webkit-transform: translateX(-50%);
+    -moz-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
+    -o-transform: translateX(-50%);
+}
+
+
+
+.slider-nav {
+    position: absolute;
+    top: 50%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    transform: translateY(-50%);
+}
+
+.slider-nav button {
+    background-color: rgba(0, 0, 0, 0.5);
+    border: none;
+    color: white;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+
+.add-to-cart {
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    margin-top: 1rem;
+    align-self: center;
+}
+
+.add-to-cart:hover {
+    background-color: hsl(180, 35%, 18%);
+}
+
+.product-list {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.product-list p {
+    margin: 0.5rem 0;
+}
+
+.product-list li {
+    background-color: var(--white);
+    padding: 1rem;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    transition: transform 0.3s ease-in-out;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100%;
+}
+
+
+.product-list img {
+    max-height: 200px;
+    object-fit: cover;
+    transition: transform 0.3s ease-in-out;
+}
+
+.product-list li:hover img {
+    transform: scale(1.1);
+}
+
+#registration {
+    padding: 2rem;
+    background-color: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    margin: 2rem 0;
+}
+
+#registration h2 {
+    margin-bottom: 1rem;
+}
+
+#registration form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+#registration form label {
+    font-weight: 500;
+}
+
+#registration form input {
+    padding: 0.5rem;
+    border: 1px solid var(--text-light);
+    border-radius: 4px;
+}
+
+#registration form button {
+    padding: 0.75rem;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 1rem;
+}
+
+#registration form button:hover {
+    background-color: hsl(180, 35%, 18%);
+}
+
+.cart {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 300px;
+    height: 100%;
+    background-color: var(--white);
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
+    z-index: 1000;
+    overflow-y: auto;
+    padding: 20px;
+}
+
+.cart-content {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+}
+
+.close {
+    align-self: flex-end;
+    color: var(--text-dark);
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover, .close:focus {
+    color: red;
+    text-decoration: none;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 0;
+    border-bottom: 1px solid var(--extra-light);
+}
+
+.cart-item p {
+    margin: 0;
+}
+
+#cart-total {
+    margin-top: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+#checkout-btn {
+    margin-top: auto;
+    background-color: var(--primary-color);
+    color: var(--white);
+    border: none;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    border-radius: 5px;
+    align-self: center;
+    font-size: 1rem;
+}
+
+#checkout-btn:hover {
+    background-color: hsl(180, 35%, 18%);
+}
+
+.cart-message {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+.cart-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    border-bottom: 1px solid #ddd;
+}
+
+.remove-from-cart {
+    background-color: #f44336;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.remove-from-cart:hover {
+    background-color: #d32f2f;
+}
+
+.cart-message {
+    position: fixed;
+    bottom: 10px;
+    right: 10px;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.3);
+    z-index: 1000;
+}
+
+#scrollTopBtn {
+    display: none;
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+#scrollTopBtn img {
+    width: 40px;
+    height: 40px;
+    transition: transform 0.3s ease;
+}
+
+#scrollTopBtn img:hover {
+    transform: scale(1.1);
+}
+
+#home .overlay-text h1, #about .overlay-text h1 {
+    font-family: 'Merriweather', serif;
+    font-weight: 900;
+    font-size: 4rem;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+#home .overlay-text p {
+    font-family: 'Merriweather', serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+#about .overlay-text p{
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 3rem 2rem;
+    font-size: 1.2rem;
+}
+
+#home, #about {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: white;
+    text-align: center;
+}
+
+#home {
+    background-image: url('img/bg1.jpg');
+}
+
+#about {
+    background-image: url('img/bg2.jpg');
+}

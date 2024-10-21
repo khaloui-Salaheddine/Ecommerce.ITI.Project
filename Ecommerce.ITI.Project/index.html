@@ -1,0 +1,152 @@
+    <!DOCTYPE html>
+    <html lang="en">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Fashion Store</title>
+        <link rel="icon" href="img/logo.jpg" type="image/x-icon">
+        <link rel="stylesheet" href="style.css">
+    </head>
+
+    <body>
+        <nav>
+            <div class="nav_header">
+                <div class="nav_logo">
+                    <a href="#" class="logo">Fashion Shop</a>
+                </div>
+            </div>
+            <ul class="nav_links" id="nav_links">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#products">Products</a></li>
+                <li><a href="#registration">Register</a></li>
+                <li><a href="#" id="cart_btn">Cart</a></li>
+            </ul>
+        </nav>
+
+        <section id="home">
+            <div class="overlay-text large-text">
+                <h1>Fashion Store</h1>
+                <p>Discover the latest trends in fashion</p>
+            </div>
+        </section>
+
+        <div class="slider-container">
+            <div class="slider">
+                <div class="slide">
+                    <img src="img/p1_black_Shirt.jpg" alt="Black Shirt">
+                    <div class="slide-info">
+                        <h3>Black Shirt</h3>
+                        <p>LE 700</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/p2_green_causual_shirt.jpg" alt="Green Casual Shirt">
+                    <div class="slide-info">
+                        <h3>Green Casual Shirt</h3>
+                        <p>LE 500</p>
+                    </div>
+                </div>
+                <div class="slide">
+                    <img src="img/p3_black_t-shirt.jpg" alt="Black T-shirt">
+                    <div class="slide-info">
+                        <h3>Black T-shirt</h3>
+                        <p>LE 280</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <section id="about">
+            <div class="section_container">
+                <div class="overlay-text large-text">
+                    <h1>About</h1>
+                    <p>Welcome to Fashion Store, your ultimate destination for the latest fashion trends and timeless classics. Our online store is dedicated to providing you with a seamless shopping experience, offering a curated selection of high-quality clothing for every occasion. Whether you're looking for stylish casual wear, elegant evening attire, or the perfect accessories to complete your look, we've got you covered.</p>
+                </div>
+            </div>
+        </section>
+
+
+        <section id="products">
+            <div class="section_container">
+                <h1>Products</h1>
+                <ul class="product-list">
+                    <li>
+                        <img src="img/p1_black_Shirt.jpg" alt="Black Shirt">
+                        <p>Black Shirt - LE 700.</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </li>
+                    <li>
+                        <img src="img/p2_green_causual_shirt.jpg" alt="Green Casual Shirt">
+                        <p>Green Casual Shirt - LE 500.</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </li>
+                    <li>
+                        <img src="img/p3_black_t-shirt.jpg" alt="Black T-shirt">
+                        <p>Black T-shirt - LE 280.</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </li>
+                    <li>
+                        <img src="img/p4_mens_sneakers_shoes_navye.jpg" alt="Navy Men's Sneakers">
+                        <p>Navy Men's Sneakers - LE 750.</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </li>
+                    <li>
+                        <img src="img/p5_polo_shirt.jpg" alt="Polo Shirt">
+                        <p>Polo Shirt - LE 450.</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </li>
+                    <li>
+                        <img src="img/p6_Jack_Jones_t-shirt.jpg" alt="Jack & Jones T-shirt">
+                        <p>Jack & Jones T-shirt - LE 900.</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </li>
+                    <li>
+                        <img src="img/p7_shoes_sneaker.jpg" alt="Sneakers">
+                        <p>Sneakers - LE 300.</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </li>
+                    <li>
+                        <img src="img/p8_classic_shoes.jpg" alt="Classic Shoes">
+                        <p>Classic Shoes - LE 1700.</p>
+                        <button class="add-to-cart">Add to Cart</button>
+                    </li>
+                </ul>
+            </div>
+        </section>
+
+        <section id="registration">
+            <div class="section_container">
+                <h2>Register</h2>
+                <form id="registration_form">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" required>
+
+                    <label for="phone">Phone:</label>
+                    <input type="tel" id="phone" required>
+
+                    <button type="submit">Register</button>
+                </form>
+            </div>
+        </section>
+
+        <div id="cart" class="cart">
+            <div class="cart-content">
+                <span class="close" id="close-cart">&times;</span>
+                <h2>Your Cart</h2>
+                <div id="cart-items"></div>
+                <p id="cart-total">Total: LE 0.00</p>
+                <button id="checkout-btn">Checkout</button>
+            </div>
+        </div>
+
+        <button id="scrollTopBtn"><img src="img/up.png" alt="scrollTopBtn"></button>
+
+        <script src="script.js"></script>
+    </body>
+
+    </html>
